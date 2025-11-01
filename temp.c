@@ -1,22 +1,21 @@
-# include <stdio.h>
+// C program to dereference double pointer
+#include <stdio.h>
+
 int main()
 {
-   int i = 0;
-   for (i=0; i<20; i++)
-   {
-     switch(i)
-     {
-       case 0:
-         i += 5;
-       case 1:
-         i += 2;
-       case 5:
-         i += 5;
-       default:
-         i += 4;
-         break;
-     }
-     printf("%d  ", i);
-   }
-   return 0;
+
+    int var = 10;
+    int* ptr = &var;
+    // double pointer
+    printf("address of var is %p and ptr address value stored is %p \n\n",&var,ptr);
+    int** dptr = &ptr;
+  printf("address value stored in dptr is %p \n\n",dptr);
+  printf("dereferenced value stored in dptr is %p \n\n",*dptr);
+    // dereferencing the double pointer
+    printf("Accesing value from double pointer using "
+           "**dptr: %d",
+           **dptr);
+    void *pt=&var;
+    printf("size of void pointer pt is  %d \n\n",sizeof(pt));
+    return 0;
 }
