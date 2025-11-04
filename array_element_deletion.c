@@ -1,4 +1,4 @@
-//Take n emements from user and which element to delete
+//Take n emements from user and which position element to delete
 /*
 let n[]={1,2,3,4,5,6,7,8}
 postion to delete= 3
