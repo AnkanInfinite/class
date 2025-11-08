@@ -22,12 +22,18 @@ int main(){
 //Defining Bubble sort
 void bubbleSort(int array[],int size){
     for(int i=0;i<size-1;i++){
+        int sorted=0;
         for(int j=0;j<size-i-1;j++){
             if(array[j]>array[j+1]){
                 int temp=array[j];
                 array[j]=array[j+1];
                 array[j+1]=temp;
+                sorted=1;
             }
+        }
+        //We break if the array is already sorted skipping unnecessay steps
+        if(sorted==0){
+            return;
         }
     }
 }
