@@ -10,7 +10,7 @@ int main(){
     }
     printf("\n");
     selectionSort(arr,n);
-    printf("Array after implementing Bubble sort : \n");
+    printf("Array after implementing Selection sort : \n");
     for(int i=0;i<n;i++){
         printf("%d ",arr[i]);
     }
@@ -27,8 +27,11 @@ void selectionSort(int array[],int size){
                 min_index=j;
             }
         }
+        //swap only if the samllest element is not in its correct position
+        if(min_index != i){
         int temp=array[min_index];
         array[min_index]=array[i];
         array[i]=temp;
+        }
     }
 }
